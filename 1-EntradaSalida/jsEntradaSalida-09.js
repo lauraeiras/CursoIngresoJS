@@ -11,7 +11,5 @@ function mostrarAumento()
 	sueldo=txtIdSueldo.value;
 	resultado=parseInt(sueldo)*1.10;
 	txtIdResultado.value=resultado;
-
-
 	
 }

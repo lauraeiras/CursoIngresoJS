@@ -6,14 +6,14 @@ en el cuadro de texto "RESULTADO"*/
 function mostrarAumento()
 {
 	var importe;
-	var descuento;
 	var resultado;
 
-	importe=txtIdImporte.value;
-	/*descuento=parseInt(importe)*0.25;
-	resultado=parseInt(importe)-parseInt(descuento);*/
+	importe = txtIdImporte.value;
 
-	resultado=parseInt(importe)*0.75;//menos codigo = resultado
+	importe = parseInt(importe);
+	
+
+	resultado = 0.75 * importe;
 
 	txtIdResultado.value=resultado;
 

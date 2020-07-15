@@ -5,8 +5,11 @@ function mostrar()
 {	
 	var nombre;
 	var edad;
-	nombre=txtIdNombre.value;
-	edad=txtIdEdad.value;
-	alert("Usted se llama "+nombre+" y tiene "+edad+" años");//concateno con comillas
+
+	nombre = txtIdNombre.value;
+	edad = txtIdEdad.value;
+	
+	alert("Usted se llama " + nombre + " y tiene " + edad + " años.");//concateno con comillas
+
 }
 

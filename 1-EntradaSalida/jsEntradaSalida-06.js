@@ -8,10 +8,17 @@ function sumar()
 	var dato2;
 	var suma;
 	
-	dato1=txtIdNumeroUno.value;
-	dato2=txtIdNumeroDos.value;
-	suma=parseInt(dato1)+parseInt(dato2);
+	//le asigno un valor
+	dato1 = txtIdNumeroUno.value;
+	dato2 = txtIdNumeroDos.value;
+
+	//parseo despues de darle un valor
+	dato1 = parseInt(dato1);
+	dato2 = parseInt(dato2);
+
+	suma = dato1 + dato2 ;
 
 	alert("La suma es "+suma);
+	 
 }
 

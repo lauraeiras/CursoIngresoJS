@@ -2,26 +2,21 @@ function mostrar()
 {
 	//tomo la edad  
 	var edad;
-	var estCivil;
+	var estadoCivil;
 
 	edad = txtIdEdad.value;
-	estCivil = document.getElementById("estadoCivil").value;
+	estadoCivil = document.getElementById("estadoCivil").value;
 
-	if ( edad < 18 && estCivil != "Soltero" )
-		{
+	if(edad >= 18 && estadoCivil == "Soltero"){
+		alert("Es soltero y no es menor");
+	}else{
 
-		}
-	
-		else
-			{
-				if(edad > 18 && estCivil == "Soltero")
-					{
-						alert("Es soltero y no es menor");
+	}
 
-					}
-					
-		
-			}
+	/*puedo usar console.log para ver por consola el valor de la variable
+	console.log(edad);
+	console.log(estadoCivil);*/
+
 			
 
 }//FIN DE LA FUNCIÓN

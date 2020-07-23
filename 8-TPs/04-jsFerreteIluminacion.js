@@ -27,26 +27,26 @@ function CalcularPrecio() {
         descuento = cantLamparas * lampara * 0.50;    
     }else{
         if(cantLamparas >= 5 && marca == "ArgentinaLuz"){
-            descuento = cantLamparas * lampara * 0.40;
+            descuento = cantLamparas * lampara * 0.60;
         }else{
             if(cantLamparas >= 5 && marca != "ArgentinaLuz"){ 
-                descuento = cantLamparas * lampara * 0.30;
+                descuento = cantLamparas * lampara * 0.70;
             }else{
                 if(cantLamparas ==4 && marca =="ArgentinaLuz" || marca == "FelipeLamparas"){
-                    descuento = cantLamparas * lampara * 0.25;
+                    descuento = cantLamparas * lampara * 0.75;
                     }   else{
                            if(cantLamparas ==4 && marca !="ArgentinaLuz" || marca != "FelipeLamparas"){ 
-                               descuento = cantLamparas * lampara * 0.20;
+                               descuento = cantLamparas * lampara * 0.80;
                                    }else{
                                       if(cantLamparas == 3 && marca == "ArgentinaLuz"){
-                                        descuento = cantLamparas * lampara * 0.15;
+                                        descuento = cantLamparas * lampara * 0.85;
                                             }else{ 
                                                 if(cantLamparas == 3 && marca == "FelipeLamparas"){
-                                                    descuento = cantLamparas * lampara * 0.10;
+                                                    descuento = cantLamparas * lampara * 0.90;
                                                 }else{
                                                     if(cantLamparas == 3 && marca != "ArgentinaLuz" || cantLamparas  != "FelipeLamparas"){        
 
-                                                        descuento = cantLamparas * lampara * 0.05;
+                                                        descuento = cantLamparas * lampara * 0.95;
                                                     }
                                                 }
 
@@ -74,19 +74,19 @@ function CalcularPrecio() {
     if (cantLamparas >= 6) {
         descuento = cantLamparas * lampara * 0.50;
     } else if (cantLamparas == 5 && marca == "ArgentinaLuz") {
-        descuento = cantLamparas * lampara * 0.40;
+        descuento = cantLamparas * lampara * 0.60;
     } else if (cantLamparas == 5) {
-        descuento = cantLamparas * lampara * 0.30;
+        descuento = cantLamparas * lampara * 0.70;
     } else if (cantLamparas == 4 && marca == "ArgentinaLuz" || marca == "FelipeLamparas") {
-        descuento = cantLamparas * lampara * 0.25;
+        descuento = cantLamparas * lampara * 0.75;
     } else if (cantLamparas == 4) {
-        descuento = cantLamparas * lampara * 0.20;
+        descuento = cantLamparas * lampara * 0.80;
     } else if (cantLamparas == 3 && marca == "ArgentinaLuz") {
-        descuento = cantLamparas * lampara * 0.15;
+        descuento = cantLamparas * lampara * 0.85;
     } else if (cantLamparas == 3 && marca == "FelipeLamparas") {
-        descuento = cantLamparas * lampara * 0.10;
+        descuento = cantLamparas * lampara * 0.90;
     } else if (cantLamparas == 3) {
-        descuento = cantLamparas * lampara * 0.05;
+        descuento = cantLamparas * lampara * 0.95;
     }// shift + alt + f // te acomoda el codigo:
 
 

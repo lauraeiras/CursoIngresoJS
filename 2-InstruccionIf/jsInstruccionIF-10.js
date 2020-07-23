@@ -1,5 +1,4 @@
-function mostrar()
-{
+function mostrar() {
 	/*//Genero el número RANDOM entre 1 y 10 
 
 	var nota;
@@ -30,13 +29,13 @@ function mostrar()
 			}
 	 
 	}*/
-	
+
 	/* Calcular dos numeros random entre1 y 51
 	* Si los dos numeros son pares multiplicarlos.Mostrar dato
 	* Si los dos son impares restarlos. Mostrar dato
 	* si alguno es divisible por 5 elevarlo al cubo.Mostrsr dato
 	*Si no ocurrio ningun caso anterior mostrar "No paso nada"
-	* Mostrar el resultado en un solo alert*/
+	* Mostrar el resultado en un solo alert*///Para esto declaro la variable mensaje en ambos alert e igualo mi variable a lo que debe hacer 
 
 	var numeroUno;
 	var numeroDos;
@@ -48,41 +47,40 @@ function mostrar()
 	var min = 1;
 	var mensaje = "";
 
-	numeroUno = Math.floor(Math.random()*(max - min))+min;
-	numeroDos = Math.floor(Math.random()*(max - min))+min;
+	numeroUno = Math.floor(Math.random() * (max - min)) + min;
+	numeroDos = Math.floor(Math.random() * (max - min)) + min;
 
 	console.log(numeroUno);
 	console.log(numeroDos);
 
-	numeroUno = parseInt(numeroUno);
-	numeroDos = parseInt(numeroDos);
-	 
+	//numeroUno = parseInt(numeroUno);Para que parsear si utilizo math.floor
+	//numeroDos = parseInt(numeroDos);
 
-		
-	if(numeroUno%2 == 0 && numeroDos%2 == 0){
-		mensaje = numeroUno * numeroDos;	
-		alert(multiplicacion);
-	}else{
-		
-		if(numeroUno%2 != 0 && numeroDos%2 != 0 ){
-			mensaje = numeroUno - numeroDos;		
-			alert(resta);
-		} 
-	}
-		if(numeroUno %5 == 0 ) {
-			console.log(Math.pow(numeroUno,3));// Mahth.pow(numeroUno,3)
-		}else{
-			if( numeroDos %5 == 0){
-				mensaje = mensaje+" Alguno es divisible por 5 y se elevo al cubo"+Math.pow(numeroDos,3);// Mahth.pow(numeroUno,3)
-			}
+
+
+	if (numeroUno % 2 == 0 && numeroDos % 2 == 0) {
+		mensaje = " Son pares los multiplico " + numeroUno * numeroDos;
+
+	} else {
+
+		if (numeroUno % 2 != 0 && numeroDos % 2 != 0) {
+			mensaje = " Son impares los resto " + numeroUno - numeroDos;
+
 		}
-			/*if(!(numeroUno%2 == 0 && numeroDos%2 == 0) && !(numeroUno%2 != 0 && numeroDos%2 != 0)  && !(numeroUno %5 == 0)  && !(numeroDos %5 == 0)) {
-				alert("No paso nada");
-				
-			}*/
-				alert(multiplicacion+" "+resta+" "+ Math.pow(numeroUno,3)+" "+Math.pow(numeroDos,3))
+	}
+	if (numeroUno % 5 == 0) {
+		mensaje = mensaje + " Alguno es divisible por 5 lo elevo al cubo " + (Math.pow(numeroUno, 3));// Mahth.pow(numeroUno,3)
+	} else {
+		if (numeroDos % 5 == 0) {
+			mensaje = mensaje + " Alguno es divisible por 5 y se elevo al cubo " + Math.pow(numeroDos, 3);// Mahth.pow(numeroUno,3)
+		}
+	}
 
+	if(mensaje ==""){// que valor le asignamos(Es un string vacio)
+		mensaje = "No paso nada";
+	}
 
+	alert(mensaje);
 
 
 }//FIN DE LA FUNCIÓN

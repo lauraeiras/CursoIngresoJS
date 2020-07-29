@@ -71,7 +71,7 @@ function CalcularPrecio() {
             alert("IIBB Usted pago "+importeFinal+", siendo "+impuestoIIBB+"  el impuesto que se pagó.")
         }*/
 
-    if (cantLamparas >= 6) {
+    /*if (cantLamparas >= 6) {
         descuento = cantLamparas * lampara * 0.50;
     } else if (cantLamparas == 5 && marca == "ArgentinaLuz") {
         descuento = cantLamparas * lampara * 0.60;
@@ -90,6 +90,62 @@ function CalcularPrecio() {
     }// shift + alt + f // te acomoda el codigo:
 
 
+
+    txtIdprecioDescuento.value = descuento;
+
+
+
+    impuestoIIBB = descuento * 1.10 - descuento;
+    importeFinal = descuento + impuestoIIBB;
+
+    if (descuento > 120) {
+        alert("IIBB Usted pago " + importeFinal + ", siendo " + impuestoIIBB + "  el impuesto que se pagó.")
+    }*/
+
+    switch (cantLamparas) {
+        case 1:
+        case 2:
+            descuento = 0;
+            break;
+        case 3:
+            if (marca == "ArgentinaLuz") {
+                descuento = cantLamparas * lampara * 0.85;
+            } else {
+                if (marca == "FelipeLamparas") {
+                    descuento = cantLamparas * lampara * 0.90;
+                } else {
+                    if (marca != "ArgentinaLuz" || cantLamparas != "FelipeLamparas") {
+
+                        descuento = cantLamparas * lampara * 0.95;
+                    }
+                }
+            }
+            break;
+        case 4:
+            if (marca == "ArgentinaLuz" || marca == "FelipeLamparas") {
+                descuento = cantLamparas * lampara * 0.75;
+            } else {
+                if (marca != "ArgentinaLuz" || marca != "FelipeLamparas") {
+                    descuento = cantLamparas * lampara * 0.80;
+                }
+            }
+
+            break;
+        case 5:
+            if (cantLamparas >= 5 && marca == "ArgentinaLuz") {
+                descuento = cantLamparas * lampara * 0.60;
+            } else {
+                if (cantLamparas >= 5 && marca != "ArgentinaLuz") {
+                    descuento = cantLamparas * lampara * 0.70;
+                }
+            }
+                break;
+        default:
+            descuento = cantLamparas * lampara * 0.50;
+            break;
+
+
+    }
 
     txtIdprecioDescuento.value = descuento;
 

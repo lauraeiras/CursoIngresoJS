@@ -13,8 +13,8 @@ function mostrar()
 	respuesta='si';
 	
 	
-	while(respuesta == "si"){
-		contador++;
+	while(respuesta == "si"){//tambien puedo poner !=
+		//contador++;
 		numero = prompt("Ingrese un numero");
 		numero = parseInt(numero);
 
@@ -24,6 +24,7 @@ function mostrar()
 		}
 
 		acumulador = acumulador + numero;
+		contador++;
 	    respuesta = prompt ("¿Desea seguir? Ingrese si");
 	
 		

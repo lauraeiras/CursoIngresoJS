@@ -7,17 +7,15 @@ function mostrar() {	// declarar variables
 	var numeroMaximo;
 	var numeroMinimo;
 	var respuesta;
-	var contador;
+
 	//iniciar variables
-	contador = 0;
-	numeroMaximo = 0;
-	numeroMinimo = 0;
-	banderaDelPrimero = "es el primero";
+
+	banderaDelPrimero = true;
 	respuesta = 'si';
 
 	while (respuesta == "si") {
-		
-		contador++;
+
+
 		numeroIngresado = prompt("Ingrese numero");
 		numeroIngresado = parseInt(numeroIngresado);
 
@@ -25,21 +23,24 @@ function mostrar() {	// declarar variables
 			numeroIngresado = prompt("Error ingrese un numero");
 			numeroIngresado = parseInt(numeroIngresado);
 		}
-		if(contador == 1){
+		if (banderaDelPrimero) {
+			banderaDelPrimero = false;
+
 			numeroMaximo = numeroIngresado;
 			numeroMinimo = numeroIngresado;
 		}
-		if(numeroIngresado > numeroMaximo){
+
+		if (numeroIngresado > numeroMaximo) {
 			numeroMaximo = numeroIngresado;
-			//numeroMaximo = banderaDelPrimero;
-			
-		}else{
-			numeroMinimo = numeroIngresado;
+
+		} else {
+			if (numeroIngresado < numeroMinimo)
+				numeroMinimo = numeroIngresado;
 		}
 
 		respuesta = prompt("desea continuar?");
 	}
 	txtIdMaximo.value = numeroMaximo;
 	txtIdMinimo.value = numeroMinimo;
-	
+
 }//FIN DE LA FUNCIÓN

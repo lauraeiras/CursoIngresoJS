@@ -57,20 +57,22 @@ function mostrar() {
 	}//fin del while
 
 	//para que no me de nan si no ingreso negativos(Preguntar si esta bien)
-	if (contadorPositivos != 0) {
+	if (contadorPositivos > 0) {// me aseguro que no sea 0
 		promedioPositivos = sumaPositivos / contadorPositivos;
 	} else {
 		promedioPositivos = "No se ingresaron positivos";
 	}
-	if (contadorNegativos != 0) {
+
+
+	if (contadorNegativos < 0) {
 		promedioNegativos = sumaNegativos / contadorNegativos;
 	} else {
-		promedioNegativos = "no se ingresaron negativos";
+		promedioNegativos = "no se ingresaron negativos";//puedo iniciar la variable con el string y no hace falta el else
 	}
 
 
 
-	diferenciaPositivosNegativos = sumaPositivos + (sumaNegativos);// dunciona buscar otra manera
+	diferenciaPositivosNegativos = sumaPositivos - sumaNegativos;
 
 	document.write("la suma de negativos es : " + sumaNegativos + "<br>");
 	document.write("la suma de Positivos es : " + sumaPositivos + "<br>");

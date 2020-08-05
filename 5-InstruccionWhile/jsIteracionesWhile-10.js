@@ -20,8 +20,8 @@ function mostrar() {
 	var contadorNegativos = 0;
 	var cantidadCeros = 0;
 	var cantidadPares = 0;
-	var promedioPositivos;
-	var promedioNegativos;
+	var promedioPositivos = 0;
+	var promedioNegativos = 0;
 	var diferenciaPositivosNegativos;
 
 
@@ -46,8 +46,9 @@ function mostrar() {
 
 			} else {
 				cantidadCeros++;// por descarte 
-
 			}
+
+
 		}
 		if (numeroIngresado % 2 == 0) {
 			cantidadPares++;
@@ -56,21 +57,14 @@ function mostrar() {
 		respuesta = prompt("desea continuar?");
 	}//fin del while
 
-	//para que no me de nan si no ingreso negativos(Preguntar si esta bien)
-	if (contadorPositivos > 0) {// me aseguro que no sea 0
-		promedioPositivos = sumaPositivos / contadorPositivos;
-	} else {
-		promedioPositivos = "No se ingresaron positivos";
+	//inizializo en 0 y me ahorro los else
+	// dos if porque uno no tiene que ver con el otro.
+	if(contadorPositivos != 0){ 
+	promedioPositivos = sumaPositivos / contadorPositivos;
 	}
-
-
-	if (contadorNegativos < 0) {
-		promedioNegativos = sumaNegativos / contadorNegativos;
-	} else {
-		promedioNegativos = "no se ingresaron negativos";//puedo iniciar la variable con el string y no hace falta el else
+	if(contadorNegativos != 0){ 
+	promedioNegativos = sumaNegativos / contadorNegativos;
 	}
-
-
 
 	diferenciaPositivosNegativos = sumaPositivos - sumaNegativos;
 
